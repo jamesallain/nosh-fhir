@@ -1,0 +1,75 @@
+{
+  "host": "localhost",
+  "port": 3080,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "secret": "5b9d6c8bf2e05c421129d415fb75b3b0f5def9322087d739cc700ac0fa77f26077777adef32bbbd62adf11c87e68bdeb705b1e858e77a706c9acb43f6449a614b7802efc6576cb59101d9bbc7ee14c8fc232c8b319f6dda74d5a5295fc31e52985a9341590c754c1c603e57e5e3da0488f48c7ab3ff4eb49bcc103ab4f034752a163f95b0f13a78f8878e451d74acbe7efb127e29dd63394f13e1bda59d659c53f97e39282f6454fbfb6ec9e7ac576187e066f71f476b91708f6d9c541c75da83aaec2931d5fdb2ffdf2da8e1d891c17e13d1dd4f9fb59a64d9698d2435c46d0cf0280bcb72464a00c34e878a805b29426da1456e80e843b71abc5a4ac744afc",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "service": "users",
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "google": {
+      "clientID": "your google client id",
+      "clientSecret": "your google client secret",
+      "successRedirect": "/",
+      "scope": [
+        "profile openid email"
+      ]
+    },
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "successRedirect": "/",
+      "scope": [
+        "public_profile",
+        "email"
+      ],
+      "profileFields": [
+        "id",
+        "displayName",
+        "first_name",
+        "last_name",
+        "email",
+        "gender",
+        "profileUrl",
+        "birthday",
+        "picture",
+        "permissions"
+      ]
+    },
+    "github": {
+      "clientID": "your github client id",
+      "clientSecret": "your github client secret",
+      "successRedirect": "/"
+    },
+    "cookie": {
+      "enabled": true,
+      "name": "feathers-jwt",
+      "httpOnly": false,
+      "secure": false
+    }
+  },
+  "postgres": "postgres://postgres:postgres@localhost:5432/postgres"
+}
