@@ -1,5 +1,7 @@
 # ncp
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jamesallain/nosh-fhir.svg)](https://greenkeeper.io/)
+
 > ncp on fhir
 
 ## About
