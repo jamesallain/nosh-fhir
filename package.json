@@ -52,11 +52,11 @@
     "feathers-rest": "^1.7.2",
     "feathers-sequelize": "^2.0.0",
     "feathers-socketio": "^2.0.0",
-    "fs": "0.0.1-security",
-    "graphql": "^0.9.6",
-    "graphql-server-express": "^0.7.2",
-    "graphql-subscriptions": "^0.3.1",
-    "graphql-tools": "^0.11.0",
+    "fs": "0.0.2",
+    "graphql": "^0.10.1",
+    "graphql-server-express": "^0.8.0",
+    "graphql-subscriptions": "^0.4.2",
+    "graphql-tools": "^1.0.0",
     "helmet": "^3.6.0",
     "mocha": "^3.4.1",
     "nodemon": "^1.11.0",
@@ -69,7 +69,7 @@
     "request-promise": "^4.2.1",
     "sequelize": "^3.30.4",
     "serve-favicon": "^2.4.3",
-    "subscriptions-transport-ws": "^0.6.0",
+    "subscriptions-transport-ws": "^0.7.0",
     "winston": "^2.3.1"
   }
 }
